@@ -19,11 +19,11 @@ EOT
     registered_server_id       = string
     server_local_path          = string
     storage_sync_group_id      = string
-    cloud_tiering_enabled      = optional(bool, false)
-    initial_download_policy    = optional(string, "NamespaceThenModifiedFiles")
-    local_cache_mode           = optional(string, "UpdateLocallyCachedFiles")
+    cloud_tiering_enabled      = optional(bool)   # Default: false
+    initial_download_policy    = optional(string) # Default: "NamespaceThenModifiedFiles"
+    local_cache_mode           = optional(string) # Default: "UpdateLocallyCachedFiles"
     tier_files_older_than_days = optional(number)
-    volume_free_space_percent  = optional(number, 20)
+    volume_free_space_percent  = optional(number) # Default: 20
   }))
 }
 
