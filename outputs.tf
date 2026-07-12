@@ -1,3 +1,7 @@
+output "storage_sync_server_endpoints_id" {
+  description = "Map of id values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.id }
+}
 output "storage_sync_server_endpoints_cloud_tiering_enabled" {
   description = "Map of cloud_tiering_enabled values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
   value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.cloud_tiering_enabled }
