@@ -1,41 +1,41 @@
 output "storage_sync_server_endpoints_id" {
   description = "Map of id values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.id }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "storage_sync_server_endpoints_cloud_tiering_enabled" {
   description = "Map of cloud_tiering_enabled values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.cloud_tiering_enabled }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.cloud_tiering_enabled if v.cloud_tiering_enabled != null }
 }
 output "storage_sync_server_endpoints_initial_download_policy" {
   description = "Map of initial_download_policy values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.initial_download_policy }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.initial_download_policy if v.initial_download_policy != null && length(v.initial_download_policy) > 0 }
 }
 output "storage_sync_server_endpoints_local_cache_mode" {
   description = "Map of local_cache_mode values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.local_cache_mode }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.local_cache_mode if v.local_cache_mode != null && length(v.local_cache_mode) > 0 }
 }
 output "storage_sync_server_endpoints_name" {
   description = "Map of name values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.name }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.name if v.name != null && length(v.name) > 0 }
 }
 output "storage_sync_server_endpoints_registered_server_id" {
   description = "Map of registered_server_id values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.registered_server_id }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.registered_server_id if v.registered_server_id != null && length(v.registered_server_id) > 0 }
 }
 output "storage_sync_server_endpoints_server_local_path" {
   description = "Map of server_local_path values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.server_local_path }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.server_local_path if v.server_local_path != null && length(v.server_local_path) > 0 }
 }
 output "storage_sync_server_endpoints_storage_sync_group_id" {
   description = "Map of storage_sync_group_id values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.storage_sync_group_id }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.storage_sync_group_id if v.storage_sync_group_id != null && length(v.storage_sync_group_id) > 0 }
 }
 output "storage_sync_server_endpoints_tier_files_older_than_days" {
   description = "Map of tier_files_older_than_days values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.tier_files_older_than_days }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.tier_files_older_than_days if v.tier_files_older_than_days != null }
 }
 output "storage_sync_server_endpoints_volume_free_space_percent" {
   description = "Map of volume_free_space_percent values across all storage_sync_server_endpoints, keyed the same as var.storage_sync_server_endpoints"
-  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.volume_free_space_percent }
+  value       = { for k, v in azurerm_storage_sync_server_endpoint.storage_sync_server_endpoints : k => v.volume_free_space_percent if v.volume_free_space_percent != null }
 }
 
